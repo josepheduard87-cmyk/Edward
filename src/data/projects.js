@@ -28,7 +28,7 @@ export const projects = [
     description:
       'This portfolio — built with React, Vite, Tailwind CSS, and Framer Motion. Dark agency aesthetic with smooth scroll, section animations, and a contact form.',
     tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
-    github: 'https://github.com/',
+    github: 'https://github.com/josepheduard87-cmyk/Edward',
     demo: null,
   },
 ]
