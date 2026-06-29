@@ -30,19 +30,19 @@ export default function About() {
         </motion.h2>
 
         <motion.div
-          className="flex flex-col md:flex-row gap-12 items-start"
+          className="flex flex-col md:flex-row gap-12 items-center"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {/* Profile image with glow */}
-          <div className="relative flex-shrink-0 self-center md:self-start">
+          <div className="relative flex-shrink-0 self-center">
             <div className="absolute inset-0 rounded-2xl bg-violet-600/30 blur-2xl scale-105" />
             <img
-              src="/profile.jpg"
+              src="/Eduard.png"
               alt="Eduard Joseph D. Mendres"
-              className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl object-cover border border-white/10"
+              className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl object-cover object-[center_25%]"
               onError={(e) => {
                 e.target.style.display = 'none'
                 e.target.nextSibling.style.display = 'flex'
@@ -80,7 +80,7 @@ export default function About() {
             </p>
 
             <div className="flex flex-wrap gap-3 pt-2">
-              {['C# / Python', 'JavaScript', 'Raspberry Pi', 'LAN / TCP-IP', 'Android (Kotlin)', 'SQLite'].map((tag) => (
+              {['C#', 'Python', 'JavaScript', 'Raspberry Pi', 'LAN / TCP-IP', 'Android (Kotlin)', 'SQLite'].map((tag) => (
                 <span
                   key={tag}
                   className="px-3 py-1 rounded-full text-xs font-medium bg-white/5 border border-white/10 text-neutral-300"

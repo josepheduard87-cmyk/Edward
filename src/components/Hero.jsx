@@ -19,7 +19,9 @@ export default function Hero() {
       {/* Violet orb glow */}
       <div className="absolute right-1/4 top-1/3 w-72 h-72 rounded-full bg-violet-600/20 blur-[96px] pointer-events-none" />
 
-      <div className="relative max-w-5xl mx-auto w-full">
+      <div className="relative max-w-6xl mx-auto w-full flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
+
+      <div className="flex-1 w-full">
 
         {/* Availability badge */}
         <motion.div
@@ -119,6 +121,27 @@ export default function Hero() {
           transition={{ delay: 0.9 }}
         >
          
+        </motion.div>
+
+      </div>
+
+        {/* Headshot */}
+        <motion.div
+          className="relative flex-shrink-0"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.25, duration: 0.6 }}
+        >
+          {/* Glow behind photo */}
+          <div className="absolute inset-0 -m-4 rounded-full bg-violet-600/30 blur-3xl pointer-events-none" />
+
+          <div className="relative w-48 h-48 sm:w-60 sm:h-60 lg:w-72 lg:h-72 rounded-full overflow-hidden ring-2 ring-violet-500/50 ring-offset-4 ring-offset-black shadow-2xl shadow-violet-900/40">
+            <img
+              src="/Eduard.png"
+              alt="Eduard Joseph D. Mendres"
+              className="w-full h-full object-cover object-[center_25%]"
+            />
+          </div>
         </motion.div>
 
       </div>

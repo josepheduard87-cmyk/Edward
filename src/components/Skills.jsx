@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const skillGroups = [
   {
     category: 'Programming Languages',
-    skills: ['C#', 'Python', 'SQL', 'JavaScript', 'Kotlin'],
+    skills: ['C#', 'Python',],
   },
   {
     category: 'Web Technologies',
@@ -11,7 +11,7 @@ const skillGroups = [
   },
   {
     category: 'Tools & Platforms',
-    skills: ['WinForms', 'SQLite', 'Android Studio', 'Visual Studio', 'VS Code', 'Figma'],
+    skills: ['WinForms', 'Android Studio', 'Visual Studio', 'VS Code', 'Arduino'],
   },
   {
     category: 'Hardware & Embedded',
