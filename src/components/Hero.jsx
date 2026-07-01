@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-// Adjust this to control the photo's height (any Tailwind height value or arbitrary px/rem works)
+// Adjust this to control the desktop photo's height (any Tailwind height value or arbitrary px/rem works)
 const PHOTO_HEIGHT = 'h-72 lg:h-[520px]'
 
 export default function Hero() {
@@ -26,9 +26,26 @@ export default function Hero() {
 
         <div className="flex-1 w-full">
 
+          {/* Mobile-only compact photo */}
+          <motion.div
+            className="lg:hidden relative w-32 h-32 mx-auto mb-8"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+          >
+            <div className="absolute inset-0 -m-2 rounded-full bg-violet-600/30 blur-2xl pointer-events-none" />
+            <div className="relative w-full h-full rounded-full overflow-hidden ring-2 ring-violet-500/50 ring-offset-4 ring-offset-black shadow-2xl shadow-violet-900/40">
+              <img
+                src="/Eduard.png"
+                alt="Eduard Joseph D. Mendres"
+                className="w-full h-full object-cover object-[center_25%]"
+              />
+            </div>
+          </motion.div>
+
           {/* Availability badge */}
           <motion.div
-            className="flex items-center gap-2 mb-10"
+            className="flex items-center gap-2 mb-10 justify-center lg:justify-start"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.05 }}
@@ -44,7 +61,7 @@ export default function Hero() {
 
           {/* Role label */}
           <motion.p
-            className="text-violet-400 text-xs font-semibold tracking-[0.3em] uppercase mb-5"
+            className="text-violet-400 text-xs font-semibold tracking-[0.3em] uppercase mb-5 text-center lg:text-left"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 }}
@@ -54,7 +71,7 @@ export default function Hero() {
 
           {/* Main heading */}
           <motion.h1
-            className="text-5xl sm:text-6xl md:text-[80px] font-bold text-white leading-[1.05] tracking-tight mb-6"
+            className="text-5xl sm:text-6xl md:text-[80px] font-bold text-white leading-[1.05] tracking-tight mb-6 text-center lg:text-left"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25 }}
@@ -74,7 +91,7 @@ export default function Hero() {
 
           {/* Subtext */}
           <motion.p
-            className="text-neutral-400 text-base md:text-lg max-w-lg leading-relaxed mb-10"
+            className="text-neutral-400 text-base md:text-lg max-w-lg leading-relaxed mb-10 mx-auto lg:mx-0 text-center lg:text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35 }}
@@ -85,7 +102,7 @@ export default function Hero() {
 
           {/* CTA row */}
           <motion.div
-            className="flex flex-wrap gap-4 items-center"
+            className="flex flex-wrap gap-4 items-center justify-center lg:justify-start"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.45 }}
@@ -118,9 +135,9 @@ export default function Hero() {
 
         </div>
 
-        {/* Headshot */}
+        {/* Desktop-only large headshot */}
         <motion.div
-          className={`relative flex-shrink-0 w-full max-w-xs sm:max-w-sm lg:w-80 ${PHOTO_HEIGHT}`}
+          className={`hidden lg:block relative flex-shrink-0 w-full max-w-xs sm:max-w-sm lg:w-80 ${PHOTO_HEIGHT}`}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.25, duration: 0.6 }}
