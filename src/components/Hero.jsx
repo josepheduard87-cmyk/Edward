@@ -22,7 +22,7 @@ export default function Hero() {
       {/* Violet orb glow */}
       <div className="absolute right-1/4 top-1/3 w-72 h-72 rounded-full bg-violet-600/20 blur-[96px] pointer-events-none" />
 
-      <div className="relative max-w-6xl mx-auto w-full flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
+      <div className="relative max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
         <div className="flex-1 w-full">
 
